@@ -1,0 +1,27 @@
+body {
+	margin: 0 auto;
+	background-color: peachpuff;
+	background-image: url("Picture2.jpg");
+	background-size: cover;
+	cursor: default;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 40px;
+	align-items: center;
+	border: 2px solid rgba(128, 128, 128, 0.173);
+}
+
+.del {
+	border: 3px solid rgb(150, 173, 114);
+}
+
+.inputbox, .inputbutton, .del{
+	border: 3px solid skyblue;
+	border-radius: 0.5em;
+}
+
+.liner {
+	text-decoration: line-through;
+}
