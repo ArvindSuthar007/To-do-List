@@ -3,7 +3,6 @@ const inputbox = document.getElementsByClassName("inputbox")[0];
 const ul = document.querySelector("ul");
 
 const delParent = (event) => {
-    event.target.removeEventListener("click", delParent, false);
     event.target.parentNode.remove();
 }
 const lineThrough = (event) => {
@@ -18,7 +17,7 @@ const delbutton = () => {
     const del = document.createElement("button");
     del.classList.add("del");
     del.appendChild(document.createTextNode("del"));
-    del.addEventListener("click", delParent, false);
+    del.addEventListener("click", delParent);
 
     return del;
 }
@@ -31,7 +30,7 @@ const clicker = () => {
 
         const li = document.createElement("li");
         li.appendChild(document.createTextNode(inputbox.value));
-        li.addEventListener("click", lineThrough, false);
+        li.addEventListener("click", lineThrough);
         li.classList.add("theek");
         div.appendChild(li);
 
@@ -48,5 +47,5 @@ const keypress = (event) => {
 inputbox.addEventListener("keydown", keypress);
 inputbutton.addEventListener("click", clicker);
 
-document.querySelector("button.del").addEventListener("click", delParent, false);
-ul.querySelector("li").addEventListener("click", lineThrough, false);
+document.querySelector("button.del").addEventListener("click", delParent);
+ul.querySelector("li").addEventListener("click", lineThrough);
