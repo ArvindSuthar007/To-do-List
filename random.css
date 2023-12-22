@@ -1,9 +1,18 @@
 body {
 	margin: 0 auto;
-	background-color: peachpuff;
-	background-image: url("Picture2.jpg");
-	background-size: cover;
+	background: linear-gradient(to right, red, blue);
 	cursor: default;
+}
+
+.container1 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.colors {
+	display: flex;
+	justify-self: flex-end;
 }
 
 .wrapper {
@@ -13,13 +22,16 @@ body {
 	border: 2px solid rgba(128, 128, 128, 0.173);
 }
 
+.inputbox, .inputbutton, .del, #color1, #color2 {
+	border-radius: 0.5em;
+}
+
 .del {
 	border: 3px solid rgb(150, 173, 114);
 }
 
-.inputbox, .inputbutton, .del{
+.inputbox, .inputbutton{
 	border: 3px solid skyblue;
-	border-radius: 0.5em;
 }
 
 .liner {
